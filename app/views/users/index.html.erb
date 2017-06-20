@@ -1,0 +1,17 @@
+<p>
+  We have total <span class="users-size"><%= @users.size %></span> users!
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @users %>
+  </tbody>
+</table>
+<br>
+<h1>New User</h1>
+<%= render 'form', user: @user %>

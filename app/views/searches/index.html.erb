@@ -1,0 +1,20 @@
+<%= form_tag searches_path, method: :get do %>
+  <%= text_field_tag :q, params[:name],
+    class: "search-box", autocomplete: :off %>
+  <span>
+    <%= button_tag "search" %>
+    <%= link_to "Back to index", users_path %>
+  </span>
+<% end %>
+<br><br>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody class="user-table">
+    <%= render @users %>
+  </tbody>
+</table>
